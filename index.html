@@ -1,0 +1,41 @@
+<html>
+<head>
+  <!-- Include Required Prerequisites -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="vendor/leaflet/dist/leaflet.css">
+  <script type="text/javascript" src="vendor/leaflet/dist/leaflet.js"></script>
+  <script type="text/javascript" src="ep.js"></script>
+</head>
+<body>
+  <div id="header">
+    <h1>Earthquake Player</h1>
+  </div>
+  <div id="panel">
+    <label for="daterange">Date Range</label>
+    <input type="text" id="daterange" name="daterange" value="01/01/2015 - 01/31/2015" />
+    <label for="speed">Speed</label>
+    <select id="speed">
+      <option value="1">hours</option>
+      <option value="24">days</option>
+      <option value="730">months</option>
+    </select>
+    <input type="button" id="play" value="play" onclick="EP.getData()"/>
+    <span id="playerDate"></span>
+  </div>
+  <div id="map" name="map">
+  </div>
+
+  <script>
+    EP.init();
+  </script>
+</body>
+</html>
