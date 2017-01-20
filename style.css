@@ -1,0 +1,11 @@
+html, body, div { background: #dcf1dc; color: #22882d; font-family: 'Ubuntu, Verdana'}
+#header { background: #228D61; color: #DCF1DC; padding: 1px 1px 10px 20px; margin-bottom: 10px;}
+#panel, #map{  width: 100%;  float: left;}
+#playerStatus, #playerControls { width: 49%; float: left;}
+#playerStatus > table { width: 100%;}
+#playerStatus > table td { width: 50%;}
+.jquery-modal { z-index: 7777 !important; }
+.jquery-modal h3 { background: #6666ff; color: #fff; padding:10px;}
+.jquery-modal h4 { background: #ff3333; color: #fff; padding:10px;}
+.jquery-modal .close-modal { z-index:999;}
+.modal {  background: #dcf1dc !important;  overflow: visible !important;}
