@@ -9,3 +9,12 @@ html, body, div { background: #dcf1dc; color: #22882d; font-family: 'Ubuntu, Ver
 .jquery-modal h4 { background: #ff3333; color: #fff; padding:10px;}
 .jquery-modal .close-modal { z-index:999;}
 .modal {  background: #dcf1dc !important;  overflow: visible !important;}
+
+
+#legend-list {
+    list-style-type: none;
+}
+
+#legend-list li{
+
+}

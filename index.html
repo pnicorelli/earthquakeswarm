@@ -38,7 +38,7 @@
         <option value="24" default>days</option>
         <option value="730">months</option>
       </select>
-      <input type="button" id="play" value="play" onclick="EP.getData()"/>
+      <input type="button" id="play" value="play" onclick="EP.getData()"/><br>
     </div>
     <div id="playerStatus">
       <table>
@@ -51,7 +51,7 @@
           <td><progress id="playerProgress" value="0" max="1"></progress></td>
         </tr>
         <tr>
-          <td>events</td>
+          <td>events (<a href="#legend" rel="modal:open">legend</a>)</td>
           <td><span id="playerEvents">0</span></td>
         </tr>
       </table>
@@ -60,6 +60,12 @@
   <div id="map" name="map">
   </div>
   <div id="messages" style="display:none"></div>
+  <div id="legend"  class="modal" style="display:none">
+    Events are draw as a circle with this palette:
+    <ul id="legend-list">
+
+    </ul>
+  </div>
   <script>
     EP.init();
   </script>

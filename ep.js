@@ -4,6 +4,19 @@ var EP = {
   'icons': [],
   'markers': [],
   'map': {},
+  // init icons
+  'colors': [
+    '#d0ffad',
+    '#fcffad',
+    '#ffea5c',
+    '#ff6868',
+    '#ff0000',
+    '#de10ab',
+    '#3a0752',
+    '#000000',
+    '#000000',
+    '#000000'
+  ],
 
   'init': function(){
     $.get('info.html', function(html) {
@@ -26,25 +39,14 @@ var EP = {
     	attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(EP.map);
 
-    // init icons
-    var colors = [
-      '#ffff33',
-      '#ffbb33',
-      '#ff9933',
-      '#ff3300',
-      '#ff3333',
-      '#ff3333',
-      '#4d0000',
-      '#330000',
-      '#1a0000',
-      '#000000'
-    ]
+
     for(var i = 1; i<11; i++){
+      $('#legend-list').append('<li><div class="m'+i+'"></div>from '+(i-1)+' to ' + i +' of magnitude</li>')
       var gradient = 10;
       var css = '.m' + i + ' {\
         width: ' + i*gradient + 'px !important;\
         height: ' + i*gradient + 'px !important;\
-        background: ' + colors.shift() + ';\
+        background: ' + EP.colors.shift() + ';\
         opacity: 0.5;\
         filter: alpha(opacity=50);\
         -moz-border-radius: ' + i*(gradient/2) + 'px;\
